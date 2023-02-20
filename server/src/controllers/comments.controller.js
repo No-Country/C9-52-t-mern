@@ -10,7 +10,7 @@ exports.createComment = tryCatch(async (req, res, next) => {
 
   const comment = {
     ...req.body,
-    idUser: req.currentUser._id,
+    idUser: req.currentUser.id,
   }
 
   const commentNew = await Comment.create(comment);
@@ -22,7 +22,7 @@ exports.createComment = tryCatch(async (req, res, next) => {
   commentNew.save();
 
   const productComment = await productsComments.create({
-    idCommentss: commentNew._id,
+    idComments: commentNew._id,
     idProducts: req.params.idProduct,
   })
 
