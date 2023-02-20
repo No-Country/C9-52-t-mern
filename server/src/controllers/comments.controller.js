@@ -4,7 +4,7 @@ const tryCatch = require('../utils/tryCatch');
 
 // models
 const Comment = require('../models/commentsModels')
-
+const productsComments = require('../models/productsCommentsModels')
 
 exports.createComment = tryCatch(async (req, res, next) => {
 
@@ -20,7 +20,16 @@ exports.createComment = tryCatch(async (req, res, next) => {
   }
 
   commentNew.save();
+
+  const productComment = await productsComments.create({
+    idCommentss: commentNew._id,
+    idProducts: req.params.idProducts,
+  })
+
+  commentNew.save();
   
+  productComment.save();
+
   return res.status(201).json({
     status: 'success',
     data: {
@@ -30,3 +39,4 @@ exports.createComment = tryCatch(async (req, res, next) => {
   }).end();
 
 })
+
