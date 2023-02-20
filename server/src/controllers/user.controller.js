@@ -1,5 +1,6 @@
 const AppError = require('../utils/appError');
 const tryCatch = require('../utils/tryCatch');
+const { tokenSign } = require('../utils/generateToken');
 
 const bcrypt = require('bcrypt');
 
@@ -25,6 +26,9 @@ exports.loginUser = tryCatch(async (req, res, next) => {
     return next(new AppError('invalid credentials', 400));
   }
 
+  // Sign Token
+  const token = await tokenSign(userFind);
+
   userFind.password = undefined;
 
   return res.status(200).json({
@@ -32,6 +36,7 @@ exports.loginUser = tryCatch(async (req, res, next) => {
     status: 'success',
     data: {
       user: userFind,
+      token,
     }
   }).send();
 
