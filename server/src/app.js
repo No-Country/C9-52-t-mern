@@ -22,6 +22,9 @@ app.use('/api/v1/users', require('./routers/user.router').userRouter)
 app.use('/api/v1/products', require('./routers/productsRouters').productRouter)
 // Seller
 app.use('/api/v1/sellers', require('./routers/sellers.router').sellersRouter)
+// Comments
+
+app.use('/api/v1/comments', require('./routers/comments.router'))
 
 app.use(globalError)
 module.exports = app
