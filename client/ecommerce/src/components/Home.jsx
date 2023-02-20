@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <p className="text-sm font-medium leading-4 ml-4 my-8">PROMOCIONES</p>
-      <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8">
+      <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch scrollbar-hide items-start mb-8">
         <CardPromociones />
         <CardPromociones />
         <CardPromociones />
@@ -20,7 +20,7 @@ const Home = () => {
         <CardDestacados />
       </div>
       <p className="text-sm font-medium leading-4 ml-4 my-8">OFERTAS</p>
-      <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8">
+      <div className="flex flex-no-wrap overflow-x-scroll scrolling-touch scrollbar-hide items-start mb-8">
         <CardOfertas />
         <CardOfertas />
         <CardOfertas />
