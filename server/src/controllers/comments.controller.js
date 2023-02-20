@@ -10,7 +10,7 @@ exports.createComment = tryCatch(async (req, res, next) => {
 
   const comment = {
     ...req.body,
-    idUser: req.user._id,
+    idUser: req.currentUser._id,
   }
 
   const commentNew = await Comment.create(comment);
