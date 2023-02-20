@@ -40,3 +40,30 @@ exports.createComment = tryCatch(async (req, res, next) => {
 
 })
 
+exports.updateComment = tryCatch(async (req, res, next) => {
+  const id = req.params.id;
+  const { comment } = req.body;
+
+  const commentFind = await Comment.findById(id);
+
+  if (!commentFind) {
+    return next(new AppError('Comentario no encontrado', 404))
+  } 
+
+  // update comment
+  await commentFind.updateOne({
+    ...req.body,
+    coments: comment
+  })
+
+  commentFind.save();
+
+  return res.status(200).json({
+    status: 'success',
+    data: {
+      comment: commentFind,
+      message: 'Comentario actualizado correctamente'
+    }
+  })
+
+})
