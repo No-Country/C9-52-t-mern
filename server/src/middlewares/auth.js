@@ -1,4 +1,5 @@
 const verifyToken=require('../utils/generateToken')
+const AppError = require('../utils/AppError')
 
 export const checkAuth=async(req,res,next)=>{
   try {
@@ -6,13 +7,16 @@ export const checkAuth=async(req,res,next)=>{
     const token = req.headers['x-access-token']
     const tokenData = await verifyToken(token)
     if(tokenData.email){
-      req.tokenEmail=tokenData.email
+      req.currentUser = {
+        id: tokenData.id,
+        email: tokenData.email,
+      }
       next()
     }else{
-      res.status(409).json({error:'no autorizado'})
+      return next(new AppError('No autorizado', 401))
     }
   } catch (error) {
     console.log(error)
-    res.status(409).json({error:'no autorizado'})
+    return next(new AppError('No autorizado', 401))
   }
 }
