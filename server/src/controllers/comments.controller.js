@@ -23,7 +23,7 @@ exports.createComment = tryCatch(async (req, res, next) => {
 
   const productComment = await productsComments.create({
     idCommentss: commentNew._id,
-    idProducts: req.params.idProducts,
+    idProducts: req.params.idProduct,
   })
 
   commentNew.save();
