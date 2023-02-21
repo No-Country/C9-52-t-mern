@@ -1,6 +1,7 @@
 const mongoose  = require("mongoose");
 const { Schema } = require('mongoose');
 
+
 const commentsSchema = new Schema({
     coments: {
         type: 'string',
@@ -11,7 +12,8 @@ const commentsSchema = new Schema({
         default: 'active'
     },
     idUser: {
-        type: 'string',
+        type: mongoose.Types.ObjectId,
+        ref: 'users',
         required: true
     }
 
