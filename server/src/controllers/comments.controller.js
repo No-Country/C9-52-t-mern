@@ -5,7 +5,8 @@ const tryCatch = require('../utils/tryCatch');
 // models
 const Comment = require('../models/commentsModels')
 const productsComments = require('../models/productsCommentsModels')
-const User = require('../models/usersModels')
+const User = require('../models/usersModels');
+const { populate } = require('../models/commentsModels');
 
 exports.createComment = tryCatch(async (req, res, next) => {
 
@@ -72,35 +73,17 @@ exports.updateComment = tryCatch(async (req, res, next) => {
 exports.allCommentsProduct = tryCatch(async (req, res, next) => {
   const id = req.params.id;
 
-  const comments = await productsComments.find({ idProducts: id });
-
-  if (!comments) { 
-    return next(new AppError('No hay comentarios', 404))
-  };
-
-  const commentsAll = await Promise.all(comments.map(async (comment) => {
-    return await Comment.findOne({ _id: comment.idComments}); 
-  }))
-
-  let usersFind;
-
-  if (commentsAll.length > 0) {
-    usersFind = await Promise.all(commentsAll.map(async (comment, index) => {
-      console.log('commentss  -> ',  comment)
-      const user = await User.findOne({ _id: comment.idUser });
-
-      return {
-        comment,
-        user
-      };
-
-    }))
-  }
+  const commentsFind = await productsComments.find({ idProducts: id })
+  
+  .populate({ 
+    path: 'idComments',
+    populate: { path: 'idUser' }
+  });
 
   return res.status(200).json({
     status: 'success',
     data: {
-      comments: usersFind
+      comments: commentsFind
     }
   }).end();
 
