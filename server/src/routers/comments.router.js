@@ -7,7 +7,8 @@ const { checkAuth } = require("../middlewares/auth");
 const { 
   createComment,
   updateComment,
-  allCommentsProduct
+  allCommentsProduct,
+  deleteComment
 } = require('../controllers/comments.controller')
 
 // router
@@ -17,5 +18,7 @@ commentsRouter.post("/:idProduct", checkAuth, createComment)
 commentsRouter.get("/all/product/:id", allCommentsProduct)
 // update comment by id
 commentsRouter.put("/comment/update/:id", updateComment)
+// delete comment by id
+commentsRouter.delete("/comment/delete/:id", deleteComment)
 
 module.exports = commentsRouter;
