@@ -105,3 +105,21 @@ exports.allCommentsProduct = tryCatch(async (req, res, next) => {
   }).end();
 
 });  
+
+exports.deleteComment = tryCatch(async (req, res, next) => {
+  const id = req.params.id;
+  const comment = await Comment.find({ _id: id, status: 'active' });
+
+  if (!comment) {
+    return next(new AppError('Comentario no encontrado', 404))
+  }
+
+  comment.update({ status: 'deleted' });
+
+  comment.save();
+
+  return res.status(200).json({
+    status: 'success',
+    message: 'Comentario eliminado correctamente'
+  })
+})
