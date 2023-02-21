@@ -3,11 +3,13 @@ const { Schema } = require('mongoose');
 
 const productsCommentsSchema = new Schema({
     idComments: {
-        type: 'string',
+        type: mongoose.Types.ObjectId,
+        ref: 'comments',
         required: true
     },
     idProducts: {
-        type: 'string',
+        type: mongoose.Types.ObjectId,
+        ref: 'products',
         required: true
     }
 
