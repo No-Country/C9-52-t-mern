@@ -79,14 +79,14 @@ exports.allCommentsProduct = tryCatch(async (req, res, next) => {
   };
 
   const commentsAll = await Promise.all(comments.map(async (comment) => {
-    return await Comment.findOne({ _id: comment.idComments, status: 'active' }); 
+    return await Comment.findOne({ _id: comment.idComments}); 
   }))
 
   let usersFind;
 
-  if (commentsAll.length) {
+  if (commentsAll.length > 0) {
     usersFind = await Promise.all(commentsAll.map(async (comment, index) => {
-      console.log('comment -> ',  comment)
+      console.log('commentss  -> ',  comment)
       const user = await User.findOne({ _id: comment.idUser });
 
       return {
