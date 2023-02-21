@@ -79,7 +79,7 @@ exports.allCommentsProduct = tryCatch(async (req, res, next) => {
   };
 
   const commentsAll = await Promise.all(comments.map(async (comment) => {
-    return await Comment.findOne({ _id: comment.idComments }); 
+    return await Comment.findOne({ _id: comment.idComments, status: 'active' }); 
   }))
 
   let usersFind;
