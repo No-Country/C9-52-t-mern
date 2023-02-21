@@ -74,7 +74,6 @@ exports.allCommentsProduct = tryCatch(async (req, res, next) => {
   const id = req.params.id;
 
   const commentsFind = await productsComments.find({ idProducts: id })
-  
   .populate({ 
     path: 'idComments',
     populate: { path: 'idUser' }
