@@ -51,7 +51,7 @@ exports.loginSeller = tryCatch(async (req, res, next) => {
   };
 
   // sign toke
-  const token = tokenSing({ id: seller._id, email });
+  const token = tokenSing({ id: seller._id, email, role: seller.role });
 
   return res.status(200).json({
     status: 'success',
