@@ -12,7 +12,8 @@ const Seller = require('../models/sellerModels');
 exports.registerSeller = tryCatch(async (req, res, next) => { 
   const { password } = req.body;
 
-  const hashedPassword = await bycript.hash(password, 12);
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
 
   const seller = new Seller({
     ...req.body,
