@@ -10,12 +10,13 @@ const bcrypt = require('bcrypt');
 const Seller = require('../models/sellerModels');
 
 exports.registerSeller = tryCatch(async (req, res, next) => { 
-  const { name, email, password } = req.body;
+  const { password } = req.body;
+
   const hashedPassword = await bycript.hash(password, 12);
-  const seller = await Seller.create({
-    name,
-    email,
-    password: hashedPassword
+
+  const seller = new Seller({
+    ...req.body,
+    password: hashedPassword,
   });
 
   if (!seller) {
@@ -23,8 +24,6 @@ exports.registerSeller = tryCatch(async (req, res, next) => {
   }
 
   seller.save();
-
-  seller.password = undefined;
 
    return res.status(201).json({
     status: 'success',
