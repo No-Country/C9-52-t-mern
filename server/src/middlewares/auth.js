@@ -23,6 +23,7 @@ exports.checkAuth = async(req,res,next) => {
     req.currentUser = {
       id: tokenData.id,
       email: tokenData.email,
+      role: tokenData.role,
     }
     next()
     
