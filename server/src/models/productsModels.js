@@ -50,6 +50,10 @@ const productsSchema = new Schema({
     descuento: {
         type: Number,
         default: 0
+    },
+    idSeller: {
+      type: Schema.Types.ObjectId,
+      ref: 'sellers'
     }
 })
 
