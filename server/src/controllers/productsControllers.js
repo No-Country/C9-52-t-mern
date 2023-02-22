@@ -8,7 +8,10 @@ const Products = require('../models/productsModels');
 
 exports.createProduct = tryCatch(async (req, res, next) => {
 
-  const product = new Products(req.body);
+  const product = new Products({
+    ...req.body,
+    idSeller: req.currentUser.id,
+  });
   
   await product.save();
 
