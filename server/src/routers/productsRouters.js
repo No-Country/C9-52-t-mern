@@ -8,15 +8,20 @@ const {
 const {
   validate
 } = require('../middlewares/body.middleware')
+const {
+  checkAuth,
+  checkSeller 
+} = require('../middlewares/auth');
 
 const {
   actualizarProducto,
   createProduct,
   deleteProduct
-} = require('../controllers/productsControllers')
+} = require('../controllers/productsControllers');
 
 
-router.post('/register', validate(producRegisterBody), createProduct);
+
+router.post('/register', validate(producRegisterBody), checkAuth, checkSeller, createProduct);
 router.put('/update/:id', actualizarProducto);
 router.delete('/delete/:id', deleteProduct);
 
