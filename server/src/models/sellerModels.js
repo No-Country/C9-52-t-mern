@@ -16,7 +16,7 @@ const sellerSchema = new Schema({
     },
     role: {
         type: 'string',
-        default: 'role'
+        default: 'seller'
     },
     status: {
         type: 'string',
