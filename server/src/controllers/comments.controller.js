@@ -90,6 +90,7 @@ exports.allCommentsProduct = tryCatch(async (req, res, next) => {
 
 exports.deleteComment = tryCatch(async (req, res, next) => {
   const id = req.params.id;
+  console.log('currentUser -> ', req.currentUser)
   const comment = await Comment.updateOne({ _id: id, status: 'active' }, { status: 'deleted' });
 
   if (!comment) {
