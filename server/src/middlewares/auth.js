@@ -1,5 +1,6 @@
 const {verifyToken} = require ('../utils/generateToken')
 const AppError = require('../utils/AppError')
+const tryCatch = require('../utils/tryCatch')
 
 exports.checkAuth = async(req,res,next) => {
   try {
@@ -33,3 +34,10 @@ exports.checkAuth = async(req,res,next) => {
     return next(new AppError('No autorizado', 401))
   }
 }
+
+exports.checkSeller = tryCatch(async (req, res, next) => {
+  if (req.currentUser.role !== 'seller') {
+    return next(new AppError('No autorizado', 401))
+  }
+  return next()
+})
