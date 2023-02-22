@@ -18,7 +18,7 @@ commentsRouter.post("/:idProduct", checkAuth, createComment)
 // get all comments
 commentsRouter.get("/all/product/:id", allCommentsProduct)
 // update comment by id
-commentsRouter.put("/comment/update/:id", updateComment)
+commentsRouter.put("/comment/update/:id", checkAuth, protectComment, updateComment)
 // delete comment by id
 commentsRouter.delete("/comment/delete/:id", checkAuth, protectComment, deleteComment)
 
