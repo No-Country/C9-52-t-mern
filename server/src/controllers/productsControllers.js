@@ -1,18 +1,25 @@
+// utils
+const AppError = require('../utils/AppError');
+const tryCatch = require('../utils/tryCatch');
+
+// models
 const Products = require('../models/productsModels');
 
 
-exports.crearProductos = async (req, res, next) => {
-    
-    try {
-        const product = new Products(req.body);
-        await product.save();
-        res.send(Products);
+exports.createProduct = tryCatch(async (req, res, next) => {
 
-    } catch (error) {
-        console.log(error);
-        res.status(500).send('Hubo un error');
-    }
-}
+  const product = new Products(req.body);
+  
+  await product.save();
+
+  return res.status(201).json({
+    status: 'success',
+    data: {
+      product
+    },
+    message: 'Producto creado correctamente'
+  })
+})
 
 exports.obtenerProductos = async (req, res, next) => {
 
