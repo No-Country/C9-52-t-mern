@@ -11,12 +11,12 @@ const {
 
 const {
   actualizarProducto,
-  crearProductos,
+  createProduct,
   deleteProduct
 } = require('../controllers/productsControllers')
 
 
-router.post('/register', validate(producRegisterBody), crearProductos);
+router.post('/register', validate(producRegisterBody), createProduct);
 router.put('/update/:id', actualizarProducto);
 router.delete('/delete/:id', deleteProduct);
 
