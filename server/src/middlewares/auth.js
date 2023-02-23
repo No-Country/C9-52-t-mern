@@ -2,6 +2,9 @@ const {verifyToken} = require ('../utils/generateToken')
 const AppError = require('../utils/AppError')
 const tryCatch = require('../utils/tryCatch')
 
+// models
+const User = require('../models/usersModels')
+
 exports.checkAuth = async(req,res,next) => {
   try {
     //const token = req.headers.authorization.split(' ').pop()
@@ -46,5 +49,12 @@ exports.proctectUser = tryCatch(async (req, res, next) => {
   if (req.currentUser.id !== req.params.id) {
     return next(new AppError('No autorizado', 401))
   }
+  
+  const user = await User.findById(req.params.id)
+
+  if (!user) {
+    return next(new AppError('No autorizado', 401))
+  }
+
   return next()
 })
