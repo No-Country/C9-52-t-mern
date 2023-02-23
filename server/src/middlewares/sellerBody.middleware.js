@@ -22,22 +22,22 @@ exports.sellerRegisterBody = [
     }),
   body('password')
     .notEmpty()
-    .withMessage('Password is required')
-    .isStrongPassword()
-    .withMessage('Password is weak'),
-  body('passowrdConfirm')
+    .withMessage('Password is required'),
+  body('passwordConfirm')
     .notEmpty()
     .withMessage('Password confirm is required')
     .custom((value, { req }) => {
       if (value !== req.body.password) {
-        return AppError('password confirm is not match', 400)
+        return new AppError('password confirm is not match', 400)
       }
       return true
     }),
   body('role')
+    .optional()
     .isString()
     .withMessage('Roles is String'),
   body('status')
+    .optional()
     .isString()
     .withMessage('Status is String'),
 ]
