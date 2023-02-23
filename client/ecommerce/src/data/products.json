@@ -318,5 +318,25 @@
         "descuento": 5,
         "__v": 0,
         "categoria": "teclados"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 900,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "computadoras"
     }
 ]
