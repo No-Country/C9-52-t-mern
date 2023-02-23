@@ -41,3 +41,10 @@ exports.checkSeller = tryCatch(async (req, res, next) => {
   }
   return next()
 })
+
+exports.proctectUser = tryCatch(async (req, res, next) => {
+  if (req.currentUser.id !== req.params.id) {
+    return next(new AppError('No autorizado', 401))
+  }
+  return next()
+})
