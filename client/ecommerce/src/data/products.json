@@ -10,7 +10,7 @@
             "ram 8gb",
             "memoria 68GB"
         ],
-        "photos": [],
+        "photos": "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/193116_91e0adc6-3edd-4b98-a437-b8714c656025.jpg",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -30,7 +30,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://img01.huaweifile.com/eu/es/huawei/pms/uomcdn/ESHW/pms/202206/gbom/6941487264155/428_428_F3C5FFF264A94A1921F57A0B23E95E8Dmp.png",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -40,7 +40,7 @@
         "categoria": "computadoras"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "63f68f77d9ebfe197881921c",
         "title": "asus 32",
         "model": "mcl 32",
         "brand": "asus",
@@ -50,7 +50,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202109/20/00138545855884____8__1200x1200.jpg",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -60,8 +60,8 @@
         "categoria": "auriculares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d9ebfu197881721c",
+        "title": "microsoft",
         "model": "mcl 32",
         "brand": "asus",
         "price": 600,
@@ -70,7 +70,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.shopify.com/s/files/1/0588/3035/6664/products/krom_kluster_01_900x.jpg?v=1627572042",
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -80,8 +80,8 @@
         "categoria": "teclados"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d6ebfe197881721c",
+        "title": "acer",
         "model": "mcl 32",
         "brand": "asus",
         "price": 800,
@@ -90,7 +90,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://img01.huaweifile.com/eu/es/huawei/pms/uomcdn/ESHW/pms/202206/gbom/6941487264155/428_428_F3C5FFF264A94A1921F57A0B23E95E8Dmp.png",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -100,17 +100,17 @@
         "categoria": "computadoras"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "73f68f77d9ebfe197881721c",
         "title": "asus 32",
         "model": "mcl 32",
         "brand": "asus",
         "price": 700,
-        "description": "pc para una expericna unica en el mundo gamgi",
+        "description": "pc para una experiencia unica en el mundo gamgi",
         "characteristics": [
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos":"https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/193116_91e0adc6-3edd-4b98-a437-b8714c656025.jpg" ,
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -120,7 +120,7 @@
         "categoria": "celulares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "83f68f77d9ebfe197881721c",
         "title": "asus 32",
         "model": "mcl 32",
         "brand": "asus",
@@ -130,7 +130,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202109/20/00138545855884____8__1200x1200.jpg",
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -140,8 +140,8 @@
         "categoria": "auriculares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "93f68f77d9ebfe197881721c",
+        "title": "logitech",
         "model": "mcl 32",
         "brand": "asus",
         "price": 500,
@@ -150,7 +150,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.shopify.com/s/files/1/0588/3035/6664/products/krom_kluster_01_900x.jpg?v=1627572042",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -160,8 +160,8 @@
         "categoria": "teclados"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "64f68f77d9ebfe197881721c",
+        "title": "hp",
         "model": "mcl 32",
         "brand": "asus",
         "price": 200,
@@ -170,7 +170,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://img01.huaweifile.com/eu/es/huawei/pms/uomcdn/ESHW/pms/202206/gbom/6941487264155/428_428_F3C5FFF264A94A1921F57A0B23E95E8Dmp.png",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -180,8 +180,8 @@
         "categoria": "computadoras"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d9ebfe197881721g",
+        "title": "huawei",
         "model": "mcl 32",
         "brand": "asus",
         "price": 400,
@@ -190,7 +190,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/193116_91e0adc6-3edd-4b98-a437-b8714c656025.jpg",
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -200,8 +200,8 @@
         "categoria": "celulares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d9ebfe197881721h",
+        "title": "iphone",
         "model": "mcl 32",
         "brand": "asus",
         "price": 700,
@@ -210,7 +210,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202109/20/00138545855884____8__1200x1200.jpg",
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -220,8 +220,8 @@
         "categoria": "auriculares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d9ebfe197881721i",
+        "title": "hp",
         "model": "mcl 32",
         "brand": "asus",
         "price": 900,
@@ -230,7 +230,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.shopify.com/s/files/1/0588/3035/6664/products/krom_kluster_01_900x.jpg?v=1627572042",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -240,17 +240,17 @@
         "categoria": "teclados"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "63f68f77d9ebfe197881721j",
         "title": "asus 32",
         "model": "mcl 32",
-        "brand": "asus",
+        "brand": "lenovo",
         "price": 400,
         "description": "pc para una expericna unica en el mundo gamgi",
         "characteristics": [
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://img01.huaweifile.com/eu/es/huawei/pms/uomcdn/ESHW/pms/202206/gbom/6941487264155/428_428_F3C5FFF264A94A1921F57A0B23E95E8Dmp.png",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -260,8 +260,8 @@
         "categoria": "computadoras"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
+        "_id": "63f68f77d9ebfe197881721k",
+        "title": "samsung",
         "model": "mcl 32",
         "brand": "asus",
         "price": 100,
@@ -270,7 +270,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://www.backmarket.es/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/193116_91e0adc6-3edd-4b98-a437-b8714c656025.jpg",
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -280,7 +280,7 @@
         "categoria": "celulares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "63f68f77d9ebfe197881721l",
         "title": "asus 32",
         "model": "mcl 32",
         "brand": "asus",
@@ -290,7 +290,7 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202109/20/00138545855884____8__1200x1200.jpg",
         "status": "active",
         "promocion": false,
         "destacados": 2,
@@ -300,7 +300,7 @@
         "categoria": "auriculares"
     },
     {
-        "_id": "63f68f77d9ebfe197881721c",
+        "_id": "63f68f77d9ebfe197881721m",
         "title": "asus 32",
         "model": "mcl 32",
         "brand": "asus",
@@ -310,7 +310,8 @@
             "ram 32gb",
             "memoria 1TB"
         ],
-        "photos": [],
+        "photos": "https://cdn.shopify.com/s/files/1/0588/3035/6664/products/krom_kluster_01_900x.jpg?v=1627572042",
+
         "status": "active",
         "promocion": true,
         "destacados": 2,
@@ -318,25 +319,72 @@
         "descuento": 5,
         "__v": 0,
         "categoria": "teclados"
-    },
+    },    
     {
-        "_id": "63f68f77d9ebfe197881721c",
-        "title": "asus 32",
-        "model": "mcl 32",
-        "brand": "asus",
-        "price": 900,
-        "description": "pc para una expericna unica en el mundo gamgi",
+        "id ": "63f68d0fbb8eaea2731fb75b",
+        "title": "Celular Iphone 7",
+        "categoria": "celulares",
+        "model ": "Iphone 7",
+        "brand": "Iphone",
+        "price": 1400,
+        "description": "Pantalla Retina HD de 4.7 (diagonal), Resolución: 1334x750 (326 ppp) 1400:1 de contraste · iOS 10. (Actualizable hasta iOS 15.7.2) · 32 GB, 128 GB y 256 GB · 2 GB",
         "characteristics": [
-            "ram 32gb",
-            "memoria 1TB"
-        ],
-        "photos": [],
+           "ram 64gb",
+           "memoria 1TB"
+       ],
+        "photos": "https:/www.pngfind.com/pngs/m/457-4578563_iphone-7-png-iphone-7-plus-rose-gold.png",
         "status": "active",
-        "promocion": false,
+        "promocion": "true",
         "destacados": 2,
-        "blackFriday": false,
-        "descuento": 5,
-        "__v": 0,
-        "categoria": "computadoras"
-    }
+        "blackfriday": "false",
+        "descuento": 5
+       },
+       {
+        "id ": "63f68d0fbb8eaea2731fb75b",
+        "title": "Celular Iphone 8s",
+        "categoria": "celulares",
+        "model ": "Iphone 8S",
+        "brand": "Iphone",
+        "price": 980,
+        "description": "Pantalla Retina HD · Pantalla widescreen LCD Multi-Touch de 4.7 pulgadas (diagonal) con tecnología IPS · Resolución de 1334 x 750 pixeles a 326 ppi",
+        "characteristics": "null",
+        "photos": "https:/toppng.com/uploads/preview/apple-iphone-8-64gb-red-mrrm2rma-iphone-8-plus-red-11563402256slnwxk5h9h.png",
+        "status": "active",
+        "promocion": "false",
+        "destacados": 2,
+        "blackfriday": "false",
+        "descuento": 5
+       },
+       {
+        "id ": "564w6q5ewqe4654wqe",
+        "title": "Samsung s20E",
+        "categoria": "celulares",
+        "model ": "Samsung S20E",
+        "brand": "Samsung",
+        "price": 1250,
+        "description": "Tamaño (Pantalla_principal). 158.3mm (6.2\" full rectangle) / 154.1mm (6.1\" rounded corners) · Resolución (Pantalla principal). 3200 x 1440 (Quad HD+) · Tecnología",
+        "characteristics": "null",
+        "photos": "https:/w7.pngwing.com/pngs/8/780/png-transparent-smartphone-feature-phone-samsung-galaxy-s9-cellular-network-samsung-s9-gadget-mobile-phone-mobile-phones.png",
+        "status": "active",
+        "promocion": "false",
+        "destacados": 2,
+        "blackfriday": "true",
+        "descuento": 10
+       },
+       {
+        "id ": "2as3dasda6s4d6asd4",
+        "title": "Xiamo redmiNote",
+        "categoria": "celulares",
+        "model ": "xiaomi redmi note 9",
+        "brand": "xiaomi",
+        "price": 780,
+        "description": "64 / 128 GB + microSD (hasta 512GB) · 5.020 mAh. Carga rápida 18W · Principal: 48MP, f/1.79, 1.6μm. Gran angular: 8MP, f/2.2, 118º. Macro: 2MP",
+        "characteristics": "null",
+        "photos": "https:/themayanagari.com/wp-content/uploads/2021/04/Redmi-Note-10-Pro-Max-Png.jpg",
+        "status": "active",
+        "promocion": "true",
+        "destacados": 2,
+        "blackfriday": "false",
+        "descuento": 10
+       }
 ]
