@@ -1,0 +1,322 @@
+[
+    {
+        "_id": "63f68d0fbb8eaea2731fb75b",
+        "title": "jose",
+        "model": "ggg iphone",
+        "brand": "iphone",
+        "price": 900,
+        "description": "telefono de gama media alta",
+        "characteristics": [
+            "ram 8gb",
+            "memoria 68GB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": true,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "celulares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 900,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "computadoras"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 700,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "auriculares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 600,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "teclados"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 800,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": true,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "computadoras"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 700,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": true,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "celulares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 300,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "auriculares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 500,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "teclados"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 200,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "computadoras"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 400,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "celulares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 700,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "auriculares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 900,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "teclados"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 400,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": true,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "computadoras"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 100,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "celulares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 200,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": false,
+        "destacados": 2,
+        "blackFriday": true,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "auriculares"
+    },
+    {
+        "_id": "63f68f77d9ebfe197881721c",
+        "title": "asus 32",
+        "model": "mcl 32",
+        "brand": "asus",
+        "price": 300,
+        "description": "pc para una expericna unica en el mundo gamgi",
+        "characteristics": [
+            "ram 32gb",
+            "memoria 1TB"
+        ],
+        "photos": [],
+        "status": "active",
+        "promocion": true,
+        "destacados": 2,
+        "blackFriday": false,
+        "descuento": 5,
+        "__v": 0,
+        "categoria": "teclados"
+    }
+]
