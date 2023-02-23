@@ -16,5 +16,6 @@ const router = express.Router();
 
 router.post('/login', validate(userLoginBody), loginUser);
 router.post('/register', validate(userRegisterBody), registerUser);
+router.put('/update/:id', (req, res) => {})
 
 module.exports = { userRouter: router }; 
