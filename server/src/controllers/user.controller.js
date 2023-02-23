@@ -93,4 +93,22 @@ exports.registerUser = tryCatch(async (req, res, next) => {
 
 });
 
+exports.updateUser = tryCatch(async (req, res, next) => { 
+  const { user } = req.currentUser;
 
+  await user.updateOne(req.body);
+
+  if (!user) {
+    return next(new AppError('Error al actualizar el usuario', 404));
+  }
+  
+  user.save()
+
+  return res.status(200).json({
+    status: 'success',
+    data: {
+      user,
+    }
+  })
+
+});
