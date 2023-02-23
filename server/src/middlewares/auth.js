@@ -53,8 +53,11 @@ exports.proctectUser = tryCatch(async (req, res, next) => {
   const user = await User.findById(req.params.id)
 
   if (!user) {
-    return next(new AppError('No autorizado', 401))
+    return next(new AppError('No encontrado', 401))
   }
-
+  req.currentUser = {
+    ...req.currentUser,
+    user
+  }
   return next()
 })
