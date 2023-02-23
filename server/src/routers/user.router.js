@@ -2,7 +2,8 @@ const express = require('express');
 
 const {
   loginUser,
-  registerUser
+  registerUser,
+  updateUser
 } = require('../controllers/user.controller')
 
 // ----- middlewares ----- //
@@ -20,6 +21,6 @@ const router = express.Router();
 
 router.post('/login', validate(userLoginBody), loginUser);
 router.post('/register', validate(userRegisterBody), registerUser);
-router.put('/update/:id', checkAuth, proctectUser, (req, res) => {})
+router.put('/update/:id', checkAuth, proctectUser, updateUser)
 
 module.exports = { userRouter: router }; 
