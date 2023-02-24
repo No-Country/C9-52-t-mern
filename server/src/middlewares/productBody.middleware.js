@@ -29,8 +29,8 @@ exports.producRegisterBody = [
   body('characteristics')
     .notEmpty()
     .withMessage('Las caracteristicas son requeridas')
-    .isArray()
-    .withMessage('Las caracteristicas deben ser un array'),
+    .isString()
+    .withMessage('Las caracteristicas deben ser un String'),
   body('promocion')
     
     .isBoolean()
