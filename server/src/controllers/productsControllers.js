@@ -92,19 +92,22 @@ exports.updateProduct = tryCatch(async (req, res, next) => {
     })
 })
 
-exports.obtenerProducto = async (req, res, next) => {
-    
-    try {
-        let Products = await Products.findById(req.params.id);
-        if (!Products) {
-            res.status(404).json({ msg: 'No existe el producto '})
-        }
-        return res.json(product);
+exports.getProduct = tryCatch(async (req, res, next) => {
+    const { id } = req.params;
 
-    } catch (error) {
-        res.status(500).json({ msg: 'Hubo un error' });;  
+    const product = await Products.findById(id);
+
+    if (!product) {
+        return next(new AppError('No existe el producto', 404));
     }
-}
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            product,
+        }
+    })
+})
 
 exports.deleteProduct = async (req, res, next) => {
     
