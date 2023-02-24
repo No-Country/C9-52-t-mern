@@ -55,38 +55,42 @@ exports.createProduct = tryCatch(async (req, res, next) => {
     })
 })
 
-exports.obtenerProductos = async (req, res, next) => {
+exports.obtenerProductos = tryCatch(async (req, res, next) => {
+    const products = await Products.find();
 
-    try {
-        const Products = await Products.find();
-        res.json(Products)
-
-    } catch (error) {
-        console.log(error);
-        res.status(500).send('Hubo un error');
+    if (!products) {
+        return next(new AppError('No hay productos', 404));
     }
-}
 
-exports.actualizarProducto = async (req, res, next) => {
-    
-    try {
-        const { title, model, brand, price, description } = req.body;
-        let Products = await Products.findById(req.params.id);
-        if (!Products) {
-            res.status(404).json({ msg: 'No existe el producto '})
+    res.status(200).json({
+        status: 'success',
+        data: {
+        products,
         }
+    });
+})
 
-        await product.updateOne({ $set: req.body });
-        product.save();
+exports.actualizarProducto = tryCatch(async (req, res, next) => {
+    const { id } = req.params;
 
-        Products = await Products.findOneAndUpdate({ _id: req.params.id },product, {new: true} )
-        res.json(Products);
-
-    } catch (error) {
-        console.log(error);
-        res.status(500).send('Hubo un error');  
+    if (req.body.characteristics) {
+      const characteristics = req.body.characteristics.split(',')
+      req.body.characteristics = characteristics;
     }
-}
+
+    const product = await Products.findByIdAndUpdate(id, req.body);
+
+    if (!product) {
+        return next(new AppError('No existe el producto', 404));
+    }
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            product,
+        }
+    })
+})
 
 exports.obtenerProducto = async (req, res, next) => {
     
