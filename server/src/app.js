@@ -6,6 +6,8 @@ const { userRouter } = require('./routers/user.router')
 // globalError
 const globalError = require('./utils/globalError')
 
+const cors = require('cors')
+
 const app = express()
 
 
@@ -14,6 +16,8 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+app.use(cors())
+app.options('*', cors());
 
 // endpoints
 // .....

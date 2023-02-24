@@ -8,20 +8,22 @@ const Products = require('../models/productsModels');
 
 exports.createProduct = tryCatch(async (req, res, next) => {
 
-  const product = new Products({
-    ...req.body,
-    idSeller: req.currentUser.id,
-  });
-  
-  await product.save();
+    const files = req.files;
+    console.log(files);
+    const product = new Products({
+        ...req.body,
+        idSeller: req.currentUser.id,
+    });
+    
+    await product.save();
 
-  return res.status(201).json({
-    status: 'success',
-    data: {
-      product
-    },
-    message: 'Producto creado correctamente'
-  })
+    return res.status(201).json({
+        status: 'success',
+        data: {
+            product
+        },
+        message: 'Producto creado correctamente'
+    })
 })
 
 exports.obtenerProductos = async (req, res, next) => {
