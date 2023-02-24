@@ -55,7 +55,7 @@ exports.createProduct = tryCatch(async (req, res, next) => {
     })
 })
 
-exports.obtenerProductos = tryCatch(async (req, res, next) => {
+exports.getProducts = tryCatch(async (req, res, next) => {
     const products = await Products.find();
 
     if (!products) {
@@ -70,7 +70,7 @@ exports.obtenerProductos = tryCatch(async (req, res, next) => {
     });
 })
 
-exports.actualizarProducto = tryCatch(async (req, res, next) => {
+exports.updateProduct = tryCatch(async (req, res, next) => {
     const { id } = req.params;
 
     if (req.body.characteristics) {
