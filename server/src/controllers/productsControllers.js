@@ -35,8 +35,11 @@ exports.createProduct = tryCatch(async (req, res, next) => {
     const images = await Promise.all(urls);
     const images_urls = images.map(image => image.secure_url);
 
+    // convertir el campor characteristics a un array
+    const characteristics = req.body.characteristics.split(',')
     const product = new Products({
         ...req.body,
+        characteristics,
         idSeller: req.currentUser.id,
         photos: images_urls,
     });
@@ -46,8 +49,7 @@ exports.createProduct = tryCatch(async (req, res, next) => {
     return res.status(201).json({
         status: 'success',
         data: {
-            // product,
-            images_urls
+            product,
         },
         message: 'Producto creado correctamente'
     })
