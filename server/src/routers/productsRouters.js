@@ -15,7 +15,7 @@ const {
 const { upload } = require('../middlewares/multer.middleware');
 
 const {
-  actualizarProducto,
+  updateProduct,
   createProduct,
   deleteProduct
 } = require('../controllers/productsControllers');
@@ -23,7 +23,7 @@ const {
 
 
 router.post('/register', checkAuth, checkSeller, upload.array('image', 12), validate(producRegisterBody), createProduct);
-router.put('/update/:id', actualizarProducto);
+router.put('/update/:id', updateProduct);
 router.delete('/delete/:id', deleteProduct);
 
 
