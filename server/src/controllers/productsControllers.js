@@ -11,9 +11,7 @@ exports.createProduct = tryCatch(async (req, res, next) => {
 
     const files = req.files;
 
-    // subir las imagenes pasadas a cloudinary
     const urls = []
- 
 
     for (const file of files) {
 
@@ -26,12 +24,12 @@ exports.createProduct = tryCatch(async (req, res, next) => {
                     } else {
                         resolve(result);
                     }
-              }
+                }
             ).end(file.buffer);
 
-          });
+        });
       
-          urls.push(uploadPromise);
+        urls.push(uploadPromise);
 
     }
     const images = await Promise.all(urls);
