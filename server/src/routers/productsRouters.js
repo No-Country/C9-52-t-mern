@@ -22,7 +22,7 @@ const {
 
 
 
-router.post('/register', checkAuth, checkSeller, upload.array('image', 12), createProduct);
+router.post('/register', checkAuth, checkSeller, upload.array('image', 12), validate(producRegisterBody), createProduct);
 router.put('/update/:id', actualizarProducto);
 router.delete('/delete/:id', deleteProduct);
 
