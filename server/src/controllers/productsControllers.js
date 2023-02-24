@@ -1,6 +1,7 @@
 // utils
 const AppError = require('../utils/AppError');
 const tryCatch = require('../utils/tryCatch');
+const { cloudinary } = require('../utils/cloudinary'); 
 
 // models
 const Products = require('../models/productsModels');
@@ -9,10 +10,37 @@ const Products = require('../models/productsModels');
 exports.createProduct = tryCatch(async (req, res, next) => {
 
     const files = req.files;
-    console.log(files);
+
+    // subir las imagenes pasadas a cloudinary
+    const urls = []
+ 
+
+    for (const file of files) {
+
+        const uploadPromise = new Promise((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                { folder: 'Ecommerce' },
+                (error, result) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(result);
+                    }
+              }
+            ).end(file.buffer);
+
+          });
+      
+          urls.push(uploadPromise);
+
+    }
+    const images = await Promise.all(urls);
+    const images_urls = images.map(image => image.secure_url);
+
     const product = new Products({
         ...req.body,
         idSeller: req.currentUser.id,
+        photos: images_urls,
     });
     
     await product.save();
@@ -20,7 +48,8 @@ exports.createProduct = tryCatch(async (req, res, next) => {
     return res.status(201).json({
         status: 'success',
         data: {
-            product
+            // product,
+            images_urls
         },
         message: 'Producto creado correctamente'
     })
