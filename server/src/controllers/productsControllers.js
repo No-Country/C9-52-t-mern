@@ -109,20 +109,17 @@ exports.getProduct = tryCatch(async (req, res, next) => {
     })
 })
 
-exports.deleteProduct = async (req, res, next) => {
-    
-    try {
-        let Products = await Products.findById(req.params.id);
-        if (!Products) {
-            res.status(404).json({ msg: 'No existe el producto '})
-        }
-        await Products.findOneAndRemove({ _id: req.params.id })
-        res.json({ msg: 'Producto eliminado con exito'});
+exports.deleteProduct = tryCatch(async (req, res, next) => {
+  const { id } = req.params;
 
-    } catch (error) {
-        console.log(error);
-        return res.status(500).json({ msg: 'Hubo un error' });;  
-    }
-}
+  const product = await Products.findById(id);
+
+  if (!product) {
+    return next(new AppError('No existe el producto', 404));
+  }
+
+  product.updateOne({ status: 'deleted' })
+  
+})
 
 
