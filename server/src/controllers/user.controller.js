@@ -112,3 +112,7 @@ exports.updateUser = tryCatch(async (req, res, next) => {
   })
 
 });
+
+exports.registerAddress = tryCatch(async (req, res, next) => { 
+  const { user } = req.currentUser;
+});
