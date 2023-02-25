@@ -19,7 +19,7 @@ const homeSchema = new Schema({
         required: true
     },
     codigoPostal: {
-        type: 'string',
+        type: Number,
         required: true
     },
     referencia: {
@@ -27,8 +27,8 @@ const homeSchema = new Schema({
         required: true
     },
     idUser: {
-        type: 'string',
-        default: 'active'
+        type: Schema.Types.ObjectId,
+        ref: 'users',
     },
     status: {
         type: 'string',
