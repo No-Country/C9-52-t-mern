@@ -24,7 +24,6 @@ const homeSchema = new Schema({
     },
     referencia: {
         type: 'string',
-        required: true
     },
     idUser: {
         type: Schema.Types.ObjectId,
