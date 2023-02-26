@@ -18,7 +18,8 @@ const {
   updateProduct,
   createProduct,
   deleteProduct,
-  getProducts
+  getProducts,
+  filterProducts
 } = require('../controllers/productsControllers');
 
 
@@ -27,6 +28,7 @@ router.post('/register', checkAuth, checkSeller, upload.array('image', 12), vali
 router.put('/update/:id', updateProduct);
 router.get('/', getProducts)
 router.delete('/delete/:id', deleteProduct);
+router.post('/filter', filterProducts)
 
 
 
