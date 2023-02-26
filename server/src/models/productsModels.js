@@ -31,6 +31,10 @@ const productsSchema = new Schema({
         type: [String],
         required: true
     },
+    stock: {
+        type: Number,
+        required: true,
+    },
     status: {
         type: 'string',
         default: 'active'
