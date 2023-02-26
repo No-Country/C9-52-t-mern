@@ -6,6 +6,8 @@ const { cloudinary } = require('../utils/cloudinary');
 // models
 const Products = require('../models/productsModels');
 
+// 
+const qs = require('qs')
 
 exports.createProduct = tryCatch(async (req, res, next) => {
 
@@ -122,4 +124,44 @@ exports.deleteProduct = tryCatch(async (req, res, next) => {
   
 })
 
+exports.filterProducts = tryCatch(async (req, res, next) => {
+    const querys = {}
+    // const query = req.query
+    const filter = qs.parse(req.query)
 
+    if (filter.category) {
+        querys.category = filter.category;
+    }
+    if (filter.brand) {
+        querys.brand = filter.brand;
+    }
+    if (filter.priceMin) {
+        querys.price = {$gte: +filter.priceMin}
+    }
+    if (filter.priceMax) {
+        querys.price = {...querys.price, $lte: +filter.priceMax}
+    }
+    if (filter.promocion) {
+        querys.promocion = true
+    }
+    if (filter.blackFriday) {
+        querys.blackFriday = true
+    }
+
+    const products = await Products.find(querys)
+
+    let message = "Productos filtrados exitosamente"
+    
+    if (products.length) {
+        message = "Hay productos con los filtros pasados"
+    }
+
+    return res.status(200).json({
+        status: 'succes',
+        filter: querys,
+        data: {
+            products,
+        },
+        message,
+    })
+})
