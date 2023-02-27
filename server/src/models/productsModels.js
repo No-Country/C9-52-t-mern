@@ -3,15 +3,15 @@ const { Schema } = require('mongoose');
 
 const productsSchema = new Schema({
     title: {
-        type: 'string',
+        type: String,
         required: true
     },
     model: {
-        type: 'string',
+        type: String,
         required: true
     },
     brand: {
-        type: 'string',
+        type: String,
         required: true
     },
     price: {
@@ -20,7 +20,7 @@ const productsSchema = new Schema({
 
     },
     description: {
-        type: "string",
+        type: String,
         required: true
     },
     characteristics: {
@@ -36,14 +36,14 @@ const productsSchema = new Schema({
         required: true,
     },
     status: {
-        type: 'string',
+        type: String,
         default: 'active'
     },
-    promocion: {
+    promotion: {
         type: Boolean,
         default: false
     },
-    destacados: {
+    featured: {
         type: Number,
         default: 0
     },
@@ -51,7 +51,7 @@ const productsSchema = new Schema({
         type: Boolean,
         default: false
     },
-    descuento: {
+    discount: {
         type: Number,
         default: 0
     },
@@ -60,8 +60,9 @@ const productsSchema = new Schema({
         required: true
     },
     idSeller: {
-      type: Schema.Types.ObjectId,
-      ref: 'sellers'
+      type: mongoose.Types.ObjectId,
+      ref: 'sellers',
+      required: true,
     }
 })
 
