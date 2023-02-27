@@ -23,12 +23,7 @@ exports.checkAuth = async(req,res,next) => {
     if (!tokenData) {
       return next(new AppError('No autorizado', 401))
     }
-    
-    req.currentUser = {
-      id: tokenData.id,
-      email: tokenData.email,
-      role: tokenData.role,
-    }
+    req.currentUser = tokenData
     next()
     
   } catch (error) {
