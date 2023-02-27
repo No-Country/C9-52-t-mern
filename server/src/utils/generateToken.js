@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken')
 
+require('dotenv').config()
+
 exports.tokenSign=async(user)=>{
   return jwt.sign(
     {
