@@ -27,7 +27,11 @@ exports.loginUser = tryCatch(async (req, res, next) => {
   }
 
   // Sign Token
-  const token = await tokenSign(userFind);
+  const token = await tokenSign({
+    id: userFind._id.toString(),
+    email: userFind.email,
+    role: userFind.role,
+  });
 
   userFind.password = undefined;
 
