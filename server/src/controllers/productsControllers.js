@@ -141,24 +141,28 @@ exports.filterProducts = tryCatch(async (req, res, next) => {
     if (filter.priceMax) {
         querys.price = {...querys.price, $lte: +filter.priceMax}
     }
-    if (filter.promocion) {
-        querys.promocion = true
+    if (filter.promotion) {
+        querys.promotion = true
     }
     if (filter.blackFriday) {
         querys.blackFriday = true
+    }
+    if (filter.featured) {
+        querys.featured = filter.featured
     }
 
     const products = await Products.find(querys)
 
     let message = "Productos filtrados exitosamente"
     
-    if (products.length) {
-        message = "Hay productos con los filtros pasados"
+    if (!products.length) {
+        message = "No hay productos con los filtros pasados"
     }
 
     return res.status(200).json({
         status: 'succes',
         filter: querys,
+        amount: products.length,
         data: {
             products,
         },
