@@ -30,6 +30,8 @@ app.use('/api/v1/sellers', require('./routers/sellers.router').sellersRouter)
 app.use('/api/v1/comments', require('./routers/comments.router'))
 // Cars
 app.use('/api/v1/cars', require('./routers/cart.router').cartRouter)
+// address
+app.use('/api/v1/address', require('./routers/address.router').addressRouter)
 
 app.use(globalError)
 module.exports = app
