@@ -3,24 +3,24 @@ const { Schema } = require('mongoose');
 
 const carSchema = new Schema({
     idUser: {
-        type: 'string',
+        type: mongoose.Types.ObjectId,
+        ref: 'users',
         required: true,
     },
-    cantidad: {
+    quantity : {
         type: Number,
-        default: 'active'
     },
-    precio: {
-        type: 'string',
+    priceTotal: {
+        type: Number,
         required: true
     },
     status: {
-        type: 'string',
+        type: String,
         default: 'active'
     }
 
 });
 
-const Car = mongoose.model('car', carSchema)
+const Car = mongoose.model('cars', carSchema)
 
 module.exports = Car;

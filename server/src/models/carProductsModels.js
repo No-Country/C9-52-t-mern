@@ -3,26 +3,31 @@ const { Schema } = require('mongoose');
 
 const carProductsSchema = new Schema({
     idCar: {
-        type: 'string',
+        type: mongoose.Types.ObjectId,
+        ref: 'cars',
         required: true,
     },
-    idProducts: {
-        type: 'string',
+    idProduct: {
+        type: mongoose.Types.ObjectId,
+        ref: 'products',
         required: true
     },
-    cantidad: {
-        type: 'string',
-        required: true
-    },
-    precioProducts: {
+    quantity: {
         type: Number,
         required: true
     },
-    totalPrecio: {
+    priceProduct: {
         type: Number,
         required: true
+    },
+    priceTotal: {
+        type: Number,
+        required: true
+    },
+    status: {
+        type: String,
+        default: 'active'
     }
-
 });
 
 const CarProducts = mongoose.model('carProducts', carProductsSchema)
