@@ -7,8 +7,10 @@ Ecommerce de productos de tecnología, con filtrado por categorías y marca, as�
 https://tecnostore.vercel.app/
  
 ### - Link video promocional:
+[Vídeo](https://drive.google.com/drive/folders/1YxgI94_Wx_f30TQj_xRmMQiCdVFLR_uw?usp=sharing)
  
 ### - Mockups/Screenshoots:
+[Mockups](https://drive.google.com/drive/folders/1u0QEaPOqA2UHgOKNzHjYgLLiHF_oH8pM?usp=sharing)
  
 ### - Vertical:
 Web
